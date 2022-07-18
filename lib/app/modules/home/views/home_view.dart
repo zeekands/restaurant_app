@@ -100,7 +100,7 @@ class HomeView extends GetView<HomeController> {
                             height: 0.53.sh,
                             width: 1.sw,
                             alignment: Alignment.center,
-                            child: Text('Keranjang Kosong'),
+                            child: const Text('Keranjang Kosong'),
                           ),
                   ),
                   SizedBox(
@@ -115,7 +115,7 @@ class HomeView extends GetView<HomeController> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Subtotal'),
+                            const Text('Subtotal'),
                             Text(
                                 "Rp ${controller.getCurrency(controller.carts.totalAmount)}"),
                           ],
@@ -124,7 +124,7 @@ class HomeView extends GetView<HomeController> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Pajak (11%)'),
+                            const Text('Pajak (11%)'),
                             Text(
                                 "Rp ${controller.getCurrency(controller.carts.totalAmount * 0.11)}"),
                           ],
@@ -178,7 +178,7 @@ class HomeView extends GetView<HomeController> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Image.asset(
-                                                  'assets/images/appIcon.png',
+                                                  'assets/images/logo_app.png',
                                                   height: 100.h,
                                                   width: 100.w,
                                                 ),
@@ -215,6 +215,26 @@ class HomeView extends GetView<HomeController> {
                                                       TextInputType.phone,
                                                   decoration: InputDecoration(
                                                     labelText: 'No Handphone',
+                                                    labelStyle: TextStyle(
+                                                        fontSize: 14.sp,
+                                                        fontWeight:
+                                                            FontWeight.w500),
+                                                    border: OutlineInputBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              10),
+                                                    ),
+                                                  ),
+                                                ),
+                                                20.verticalSpace,
+                                                TextField(
+                                                  controller:
+                                                      controller.hpController,
+                                                  keyboardType:
+                                                      TextInputType.phone,
+                                                  decoration: InputDecoration(
+                                                    labelText:
+                                                        'Masukan Nomor Kartu Debit',
                                                     labelStyle: TextStyle(
                                                         fontSize: 14.sp,
                                                         fontWeight:
@@ -315,7 +335,7 @@ class HomeView extends GetView<HomeController> {
                                                                         .center,
                                                                 children: [
                                                                   Image.asset(
-                                                                    'assets/images/appIcon.png',
+                                                                    'assets/images/logo_app.png',
                                                                     height:
                                                                         200.h,
                                                                     width:
@@ -416,7 +436,7 @@ class HomeView extends GetView<HomeController> {
                                         snackPosition: SnackPosition.BOTTOM,
                                         backgroundColor: Colors.red,
                                         colorText: Colors.white,
-                                        margin: EdgeInsets.all(10),
+                                        margin: const EdgeInsets.all(10),
                                       );
                               },
                               child: const Text('Lanjutkan Pesanan'),
@@ -442,12 +462,13 @@ class HomeView extends GetView<HomeController> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               //search bar
               children: [
-                Image.asset(
-                  "assets/images/appIcon.png",
-                  width: 100.w,
-                  height: 100.h,
-                  fit: BoxFit.cover,
-                ),
+                Text(
+                  "Easy Topup",
+                  style: TextStyle(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white),
+                ).paddingOnly(right: 10.w),
                 Flexible(
                   child: GestureDetector(
                     onTap: () {
@@ -457,7 +478,7 @@ class HomeView extends GetView<HomeController> {
                         snackPosition: SnackPosition.BOTTOM,
                         backgroundColor: Colors.red,
                         colorText: Colors.white,
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                       );
                     },
                     child: Container(
