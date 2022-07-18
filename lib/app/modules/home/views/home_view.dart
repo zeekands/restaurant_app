@@ -226,26 +226,6 @@ class HomeView extends GetView<HomeController> {
                                                     ),
                                                   ),
                                                 ),
-                                                20.verticalSpace,
-                                                TextField(
-                                                  controller:
-                                                      controller.hpController,
-                                                  keyboardType:
-                                                      TextInputType.phone,
-                                                  decoration: InputDecoration(
-                                                    labelText:
-                                                        'Masukan Nomor Kartu Debit',
-                                                    labelStyle: TextStyle(
-                                                        fontSize: 14.sp,
-                                                        fontWeight:
-                                                            FontWeight.w500),
-                                                    border: OutlineInputBorder(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              10),
-                                                    ),
-                                                  ),
-                                                ),
                                                 40.verticalSpace,
                                                 Row(
                                                   mainAxisAlignment:
