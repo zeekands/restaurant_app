@@ -20,7 +20,7 @@ class HomeController extends GetxController {
   }
 
   final selectedValueIndex = 0.obs;
-  final buttonText = ["Snack", "Kuah", "Minuman"];
+  final buttonText = ["Pulsa", "Data", "Game"];
   final iconButton = [
     "assets/images/ic_makanan.png",
     "assets/images/ic_kuah.png",
